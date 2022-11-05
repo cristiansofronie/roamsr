@@ -18,6 +18,7 @@ const questionCodeMap = {
 	Space: () => {
 		showAnswerAndCloze();
 		addResponseButtons();
+    document.querySelector('.rm-article-wrapper').scrollTop = 0;
 	},
 	...questionAndAnswerCodeMap,
 };

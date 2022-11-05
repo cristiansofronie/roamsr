@@ -165,6 +165,7 @@ export const goToCurrentCard = async () => {
 	questionState();
 	await sleep(200);
 	await doStuff();
+  document.querySelector('.rm-article-wrapper').scrollTop = 0;
 
 	window.onhashchange = () => {
 		inquiryState();

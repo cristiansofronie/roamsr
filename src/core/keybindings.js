@@ -63,9 +63,6 @@ export const processKey = (e) => {
 	// if we are editing, dont process
 	if (document.activeElement.type === "textarea" || document.activeElement.type === "input") return;
 
-  e.stopImmediatePropagation();
-  e.preventDefault();
-
 	// this is not be necessary anymore because we have status
 	// !location.href.includes(getCurrentCard().uid)
 
@@ -73,6 +70,9 @@ export const processKey = (e) => {
 	if (statusCodeMap) {
 		const func = statusCodeMap[e.code];
 		if (func) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+
 			func(e);
 		}
 	}
